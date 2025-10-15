@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Navigation Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="headerWrapper">
+        <header id="top">
+            <img src="images/logo1x.png" alt="logo">
+            <span>Instrument Junction</span>
+            <a href="#navLinks">&#9776;</a>
+        </header>
+    </div><!-- end header wrapper -->
+
+
+
+    <div id="navWrapper">
+        <nav id="navLinks">
+            <a href="#top">&#10005</a>
+            <ul>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Services</a></li>
+                <li class="active"><a href="#">Best Practices</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div> <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+        <main>
+
+            <h1>Join our Community Band!</h1>
+
+            <form method="GET" action="thanks.html" class="myForm" autocomplete="on">
+                <h3>Personal Information</h3>
+                <label>First Name: <input type="text" name="fname" autocomplete="given-name" required
+                        title="Your first name here."></label>
+                <label>Lirst Name: <input type="text" name="lname" autocomplete="family-name" required
+                        title="Your last name here."></label>
+                <label>Email: <input type="email" name="email" autocomplete="email" required
+                        title="Your email please!"></label>
+                <label>Phone Number: <input type="tel" name="phone" autocomplete="tel" required
+                        title="Your phone number here."></label>
+
+                <h3>Your Current Education</h3>
+                <label><input type="radio" name="ed" value="high-school">High School</label>
+                <label><input type="radio" name="ed" value="college">College Undergrad</label>
+                <label><input type="radio" name="ed" value="alumni">College Alumni</label>
+                <label><input type="radio" name="ed" value="community">Community Member/ Other</label>
+
+                <h3>Experience Level</h3>
+                <label><input type="radio" name="level">Beginner</label>
+                <label><input type="radio" name="level">Intermediate</label>
+                <label><input type="radio" name="level">Advanced</label>
+                <label><input type="radio" name="level">Professional</label>
+
+                <h3>Which of these apply?</h3>
+                <label><input type="checkbox" name="">I've never taken a band class, but I'd love to experience
+                    one.</label>
+                <label><input type="checkbox" name="">I've taken band class once.</label>
+                <label><input type="checkbox" name="">Band has been consistent throughout my schooling.</label>
+                <label><input type="checkbox" name="">I'm a self-taught musician.</label>
+                <label><input type="checkbox" name="">I play multiple instruments.</label>
+                <label><input type="checkbox" name="">I've taken private lessons.</label>
+                <label><input type="checkbox" name="">I've competed in state or international competitions.</label>
+                <label><input type="checkbox" name="">I've taught band classes.</label>
+                <label><input type="checkbox" name="">I've written/composed band music.</label>
+
+                <h3>Your Instrument</h3>
+                <label>
+                    <select name="Instrument">
+                        <option value="No Instrument chosen">Select an Instrument</option>
+                        <option value="AltoSax">Alto Saxaphone</option>
+                        <option value="BariSax">Baritone Saxaphone</option>
+                        <option value="BassClarinet">Bass Clarinet</option>
+                        <option value="Bassoon">Bassoon</option>
+                        <option value="BbClarinet">Bb Clarinet</option>
+                        <option value="EbClarinet">Eb Clarinet</option>
+                        <option value="Euphonium">Euphonium</option>
+                        <option value="Flute">Flute</option>
+                        <option value="FrenchHorn">French Horn</option>
+                        <option value="Oboe">Oboe</option>
+                        <option value="Percussion">Percussion</option>
+                        <option value="Piccalo">Piccolo</option>
+                        <option value="TenorSax">Tenor Saxaphone</option>
+                        <option value="Trombone">Trombone</option>
+                        <option value="Trumpet">Trumpet</option>
+                        <option value="Tuba">Tuba</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+
+                    <label>UserName (6 or more)<input type="text" required minlength="6"
+                            title="Your Username should be at least 6 characters long."></label>
+
+                    <label>Password (5-9 letters or numbers)<input type="password" name="password" required
+                            pattern="[A-Za-z0-9]{5,9}" title="5-9 letters or numbers.">
+                    </label>
+                    <input type="submit" value="Let's make some noise!"
+                    
+            </form>
+
+        </main>
+    </div><!-- end main wrapper -->
+
+    <div id="footerWrapper">
+        <footer>
+            <p>Copyright &copy; 2025 Design Thinking Inc. All rights reserved.
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a>
+            </p>
+        </footer>
+    </div> <!-- end footer wrapper -->
+
+</body>
+
+</html>
