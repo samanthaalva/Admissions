@@ -54,28 +54,28 @@
                         title="Your phone number here."></label>
 
                 <h3>Your Current Education</h3>
-                <label><input type="radio" name="ed" value="high-school">High School</label>
-                <label><input type="radio" name="ed" value="college">College Undergrad</label>
-                <label><input type="radio" name="ed" value="alumni">College Alumni</label>
-                <label><input type="radio" name="ed" value="community">Community Member/ Other</label>
+                <label><input type="radio" name="ed" value="high-school"><span>High School</span></label>
+                <label><input type="radio" name="ed" value="college"><span>College Undergrad</span></label>
+                <label><input type="radio" name="ed" value="alumni"><span>College Alumni</span></label>
+                <label><input type="radio" name="ed" value="community"><span>Community Member/ Other</span></label>
 
                 <h3>Experience Level</h3>
-                <label><input type="radio" name="level">Beginner</label>
-                <label><input type="radio" name="level">Intermediate</label>
-                <label><input type="radio" name="level">Advanced</label>
-                <label><input type="radio" name="level">Professional</label>
+                <label><input type="radio" name="level"><span>Beginner</span></label>
+                <label><input type="radio" name="level"><span>Intermediate</span></label>
+                <label><input type="radio" name="level"><span>Advanced</span></label>
+                <label><input type="radio" name="level"><span>Professional</span></label>
 
                 <h3>Which of these apply?</h3>
-                <label><input type="checkbox" name="">I've never taken a band class, but I'd love to experience
-                    one.</label>
-                <label><input type="checkbox" name="">I've taken band class once.</label>
-                <label><input type="checkbox" name="">Band has been consistent throughout my schooling.</label>
-                <label><input type="checkbox" name="">I'm a self-taught musician.</label>
-                <label><input type="checkbox" name="">I play multiple instruments.</label>
-                <label><input type="checkbox" name="">I've taken private lessons.</label>
-                <label><input type="checkbox" name="">I've competed in state or international competitions.</label>
-                <label><input type="checkbox" name="">I've taught band classes.</label>
-                <label><input type="checkbox" name="">I've written/composed band music.</label>
+                <label><input type="checkbox" name=""><span>I've never taken a band class, but I'd love to experience
+                    one.</span></label>
+                <label><input type="checkbox" name=""><span>I've taken band class once.</span></label>
+                <label><input type="checkbox" name=""><span>Band has been consistent throughout my schooling.</span></label>
+                <label><input type="checkbox" name=""><span>I'm a self-taught musician.</span></label>
+                <label><input type="checkbox" name=""><span>I play multiple instruments.</span></label>
+                <label><input type="checkbox" name=""><span>I've taken private lessons.</span></label>
+                <label><input type="checkbox" name=""><span>I've competed in state or international competitions.</span></label>
+                <label><input type="checkbox" name=""><span>I've taught band classes.</span></label>
+                <label><input type="checkbox" name=""><span>I've written/composed band music.</span></label>
 
                 <h3>Your Instrument</h3>
                 <label>
@@ -107,7 +107,7 @@
                     <label>Password (5-9 letters or numbers)<input type="password" name="password" required
                             pattern="[A-Za-z0-9]{5,9}" title="5-9 letters or numbers.">
                     </label>
-                    <input type="submit" value="Let's make some noise!"
+                    <input id="submit" type="submit" value="Let's make some noise!"
                     
             </form>
 
@@ -116,12 +116,10 @@
 
     <div id="footerWrapper">
         <footer>
-            <p>Copyright &copy; 2025 Design Thinking Inc. All rights reserved.
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a>
-            </p>
+        <p class="legal"> &copy; <span id="year">x</span> &bull; Samantha Alva &bull; DWDD2610 </p>
         </footer>
     </div> <!-- end footer wrapper -->
-
+    <script src="js/scripts.js" type="module"></script>
 </body>
 
 </html>

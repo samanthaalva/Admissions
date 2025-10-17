@@ -400,7 +400,10 @@ form.myForm label {
   display: block;
   font-size: 0.8rem;
   color: green;
-  padding-top: 0.2rem;
+  padding-top: 0.5rem;
+}
+form.myForm label span {
+  margin-left: 0.5rem;
 }
 form.myForm h3 {
   font-size: 0.9rem;
@@ -425,7 +428,7 @@ form.myForm select {
   width: 250px;
   padding: 0.5rem 10px;
 }
-form.myForm input [type=submit] {
+form.myForm #submit {
   border: none;
   background-color: red;
   color: blue;

@@ -22,7 +22,7 @@ body {
 
 
 /* --------------------------- HEADER --------------------------- */
-#headerWrapper {border-bottom: 1px solid $greyColor;}
+#headerWrapper {border-bottom: 1px solid $tColor;}
 header {
     display: grid;
     grid-template-columns: 50px auto 44px;
@@ -32,7 +32,7 @@ header {
     span {
         font-size: 1.6rem;
         font-weight: $lightWeight;
-        color: $primaryColor;
+    
     }
 } // end header
 
@@ -48,7 +48,7 @@ div#navWrapper {
     font-size: 1.6rem;
     height: 44px;
     text-decoration: none;
-    color: #333;    
+    color: $pColor;    
 }
 #top a {
     font-size: 2rem;
@@ -109,12 +109,15 @@ form.myForm {
     label {
         display: block;
         font-size: .8rem;
-        color: green;
-        padding-top: .2rem;
+        color: orange;
+        padding-top: .5rem;
+        span {
+            margin-left: .5rem;
+        }
     }
     h3 {
         font-size: .9rem;
-        color: red;
+        color: blue;
         margin: 1.5rem 0 .2rem 0;
         border-bottom: 1px solid blue;
     }
@@ -137,10 +140,10 @@ form.myForm {
 
     }
 
-    input [type=submit] {
+    #submit{
         border: none;
         background-color: red;
-        color: blue;
+        color: green;
         border-radius: 1.5rem;
         margin: 2rem 0;
         width: 250px;
