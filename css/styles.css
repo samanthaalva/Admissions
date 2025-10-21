@@ -1,3 +1,5 @@
+/* --------------------------- MAIN STYLESHEET --------------------------- */
+/* Import base resets and variables */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -299,13 +301,17 @@ template {
   display: none;
 }
 
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+/* --------------------------- COLOR VARIABLES --------------------------- */
+/* --------------------------- TYPOGRAPHY --------------------------- */
+/* --------------------------- SPACING --------------------------- */
+/* Import small (default) styles */
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
-/*  Apply a natural box layout model to all elements  */
+/* Apply a natural box layout model to all elements */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -322,7 +328,7 @@ body {
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #f04037;
 }
 
 header {
@@ -335,21 +341,21 @@ header {
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: #1d295f;
 }
 
-/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+/* --------------------------- NAVIGATION --------------------------- */
 div#navWrapper {
   grid-row-start: 4;
 }
 
-#top a, #navLinks > a {
+#top a,
+#navLinks > a {
   display: block;
   text-align: right;
   font-size: 1.6rem;
   height: 44px;
   text-decoration: none;
-  color: #333;
+  color: #f9be04;
 }
 
 #top a {
@@ -370,20 +376,20 @@ nav ul {
 }
 nav li a {
   display: block;
-  color: #1d295f;
+  color: blue;
   padding: 0.9rem 2vw;
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid red;
 }
 nav li.active a {
-  color: #7c1d47;
+  color: purple;
 }
 
 /* --------------------------- MAIN --------------------------- */
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
-  color: #7c1d47;
+  color: purple;
   font-weight: 300;
 }
 main p {
@@ -392,14 +398,14 @@ main p {
   line-height: 150%;
 }
 
-/* --------------------------- FORM--------------------------- */
+/* --------------------------- FORM --------------------------- */
 form.myForm {
   margin: 1rem 10px;
 }
 form.myForm label {
   display: block;
   font-size: 0.8rem;
-  color: green;
+  color: orange;
   padding-top: 0.5rem;
 }
 form.myForm label span {
@@ -407,12 +413,12 @@ form.myForm label span {
 }
 form.myForm h3 {
   font-size: 0.9rem;
-  color: red;
+  color: blue;
   margin: 1.5rem 0 0.2rem 0;
   border-bottom: 1px solid blue;
 }
 form.myForm input[type=text],
-form.myForm input [type=tel],
+form.myForm input[type=tel],
 form.myForm input[type=number],
 form.myForm input[type=email],
 form.myForm input[type=password],
@@ -420,7 +426,7 @@ form.myForm select {
   color: purple;
   display: block;
   margin: 0.1rem 0 1rem 0;
-  border: 1px solid #ccc;
+  border: 1px solid red;
   border-radius: 10px;
   border-bottom-width: 4px;
   border-bottom-color: yellow;
@@ -430,8 +436,8 @@ form.myForm select {
 }
 form.myForm #submit {
   border: none;
-  background-color: red;
-  color: blue;
+  background-color: blue;
+  color: green;
   border-radius: 1.5rem;
   margin: 2rem 0;
   width: 250px;
@@ -442,26 +448,26 @@ form.myForm #submit {
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #1d295f;
+  color: green;
+  background-color: black;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #ccc;
   text-align: center;
   line-height: 150%;
 }
-footer a {
-  color: #ccc;
-}
 
+/* --------------------------- MEDIA QUERIES --------------------------- */
+/* 35em = 560px (based on 16px base font size) */
 @media only screen and (min-width: 35rem) {
-  /* NAVIGATION STUFF GOES HERE  */
+  /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
   body {
     display: block;
   }
-  #top a, #navLinks > a {
+  #top a,
+  #navLinks > a {
     display: none;
   }
   nav {
@@ -474,13 +480,17 @@ footer a {
     border: none;
   }
   nav li a:hover {
-    background-color: #EEE;
+    background-color: #eee;
   }
 }
+/* 64em = 1024px (based on 16px base font size) */
 @media only screen and (min-width: 64rem) {
-  header, nav, main {
+  /* --------------------------- LAYOUT --------------------------- */
+  header,
+  nav,
+  main {
     max-width: 960px;
     margin: auto;
   }
-  /* NAVIGATION STUFF GOES HERE  */
+  /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 }

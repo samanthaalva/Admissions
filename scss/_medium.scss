@@ -1,20 +1,25 @@
-/* NAVIGATION STUFF GOES HERE  */
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 body {
-    display: block; //Cancels out the grid display from _small.scss
+  display: block; // Cancels out the grid display from _small.scss
 }
-#top a, #navLinks > a {
-    display: none;
+
+#top a,
+#navLinks > a {
+  display: none;
 }
+
 nav {
-    height: auto;
-    
-    ul {
-        display: flex;
-    }
-    li a {
-        border: none;
-    }
-    li a:hover {
-        background-color: #EEE;
-    }
+  height: auto;
+
+  ul {
+    display: flex;
+  }
+
+  li a {
+    border: none;
+  }
+
+  li a:hover {
+    background-color: #eee;
+  }
 }
