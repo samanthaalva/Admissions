@@ -17,3 +17,11 @@
 @media only screen and (min-width: 64rem) {
   @import "large";
 }
+@media only screen and (min-width: 35rem) { // medium
+  #navLinks {
+    transform: none;  // remove off-screen translation
+    position: static; // normal flow
+    height: auto;
+    width: auto;
+  }
+}

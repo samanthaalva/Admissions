@@ -338,14 +338,15 @@ header {
   align-items: center;
   padding: 0.5rem 10px;
 }
-header span {
-  font-size: 1.6rem;
-  font-weight: 300;
+header img {
+  width: 200px;
+  height: auto;
 }
 
 /* --------------------------- NAVIGATION --------------------------- */
-div#navWrapper {
+div #navWrapper {
   grid-row-start: 4;
+  background-color: #fffdf6;
 }
 
 #top a,
@@ -355,15 +356,11 @@ div#navWrapper {
   font-size: 1.6rem;
   height: 44px;
   text-decoration: none;
-  color: #f9be04;
-}
-
-#top a {
-  font-size: 2rem;
+  color: #44a6dd;
 }
 
 #navLinks > a {
-  padding: 15px 13px 0;
+  padding: 15px 13px 0 0;
 }
 
 nav {
@@ -376,25 +373,62 @@ nav ul {
 }
 nav li a {
   display: block;
-  color: blue;
+  color: #44a6dd;
   padding: 0.9rem 2vw;
   text-decoration: none;
-  border-bottom: 1px solid red;
+  text-align: center;
 }
 nav li.active a {
-  color: purple;
+  color: #f9be04;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Hide nav by default */
+#navLinks {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fffdf6;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* This slides the menu away when you click the "X" entity*/
+#navLinks:target {
+  transform: translateX(0);
+}
+
+/* Optional overlay or body fix (optional but nice) */
+body:has(#navLinks:target) {
+  overflow: hidden; /* prevents background scroll when menu open */
+}
+
+/* Style for close button */
+#navLinks > a {
+  display: block;
+  text-align: right;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #44a6dd;
+  text-decoration: none;
 }
 
 /* --------------------------- MAIN --------------------------- */
+main {
+  background-color: #e0f0f9;
+}
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
   font-size: 1.5rem;
-  color: purple;
-  font-weight: 300;
+  color: #1F4270;
+  font-weight: 500;
 }
 main p {
   padding: 0.5rem 10px;
-  color: #333;
   line-height: 150%;
 }
 
@@ -404,18 +438,19 @@ form.myForm {
 }
 form.myForm label {
   display: block;
-  font-size: 0.8rem;
-  color: orange;
+  font-size: 1rem;
+  color: #1F4270;
   padding-top: 0.5rem;
 }
 form.myForm label span {
   margin-left: 0.5rem;
 }
 form.myForm h3 {
-  font-size: 0.9rem;
-  color: blue;
+  font-size: 1.2rem;
+  color: #1F4270;
   margin: 1.5rem 0 0.2rem 0;
-  border-bottom: 1px solid blue;
+  padding-top: 0.7rem;
+  border-bottom: 1px solid #1F4270;
 }
 form.myForm input[type=text],
 form.myForm input[type=tel],
@@ -423,37 +458,56 @@ form.myForm input[type=number],
 form.myForm input[type=email],
 form.myForm input[type=password],
 form.myForm select {
-  color: purple;
+  color: #44a6dd;
   display: block;
   margin: 0.1rem 0 1rem 0;
-  border: 1px solid red;
+  border: 1px solid #f9be04;
   border-radius: 10px;
   border-bottom-width: 4px;
-  border-bottom-color: yellow;
+  border-bottom-color: #f9be04;
   font-size: 1rem;
   width: 250px;
   padding: 0.5rem 10px;
 }
+form.myForm input:is([type=text],
+[type=email],
+[type=tel],
+[type=number],
+[type=password]):is(:-webkit-autofill, :autofill) {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #f9be04;
+}
+form.myForm input:is([type=text],
+[type=email],
+[type=tel],
+[type=number],
+[type=password]):is(:-webkit-autofill, :autofill) {
+  -webkit-text-fill-color: #44a6dd !important;
+  caret-color: #44a6dd;
+  box-shadow: 0 0 0px 1000px #fffdf6 inset !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
 form.myForm #submit {
   border: none;
-  background-color: blue;
-  color: green;
+  background-color: #f04037;
+  color: white;
   border-radius: 1.5rem;
   margin: 2rem 0;
   width: 250px;
   font-size: 1.2rem;
   -webkit-appearance: none;
   appearance: none;
+  padding: 1.5rem 0;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  color: green;
-  background-color: black;
+  color: white;
+  background-color: #44a6dd;
 }
 
 footer {
-  font-size: 0.85rem;
+  font-size: 1.5rem;
   padding: 1rem 10px;
   text-align: center;
   line-height: 150%;
@@ -482,6 +536,10 @@ footer {
   nav li a:hover {
     background-color: #eee;
   }
+  header img {
+    width: 350px;
+    height: auto;
+  }
 }
 /* 64em = 1024px (based on 16px base font size) */
 @media only screen and (min-width: 64rem) {
@@ -493,4 +551,12 @@ footer {
     margin: auto;
   }
   /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+}
+@media only screen and (min-width: 35rem) {
+  #navLinks {
+    transform: none;
+    position: static;
+    height: auto;
+    width: auto;
+  }
 }
